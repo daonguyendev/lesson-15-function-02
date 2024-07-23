@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert Temperature</title>
+</head>
+<body>
+  <h2>Temperature Converter</h2>
+  <p>Type a value in the Fahrenheit field to convert the value</p>
+  <label>Fahrenheit</label>
+  <input id="doF" placeholder="Vui lòng nhập độ F"
+         onchange="convertFtoC(this)"/>
+  <p>Celsius: <span id="doC"></span></p>
+
+  <script>
+    //Chuyển từ độ F sang độ C
+    //Input: biến chứa độ F
+    //Process:
+    // Bước 1: chuyển từ độ F sang độ C theo công thức
+    // Bước 2: lấy giá trị sau khi chuyển đổi gán vào 1 biến kết quả (doC)
+    //Output: xuất ra biến kết quả
+
+    function convertFtoC(inputTag) {
+      let doF = inputTag.value;
+      let doC = (doF - 32)/1.8;
+      document.getElementById("doC").innerText = doC.toString();
+    }
+  </script>
+</body>
+</html>
